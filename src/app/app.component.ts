@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,14 +18,14 @@ export class AppComponent {
       completada: true
     }
   ];
-  nuevaTarea = "";
 
-  public agregarTarea() {
+  public agregarTarea(tareaForm: NgForm) {
+    // console.log(tareaForm)
     this.tareas.push({
-      titulo: this.nuevaTarea,
+      titulo: tareaForm.form.value.tituloTarea,
       completada: false
     });
-    this.nuevaTarea = '';
+    tareaForm.reset();
   }
 
   public borrarTarea(i: number) {
