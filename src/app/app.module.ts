@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TrashIconComponent } from './icons/trash-icon/trash-icon.component';
 import { AgregarTareaComponent } from './tarea/agregar-tarea/agregar-tarea.component';
+import { ListaTareasComponent } from './tarea/lista-tareas/lista-tareas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrashIconComponent,
     AgregarTareaComponent,
+    ListaTareasComponent,
   ],
   imports: [
     BrowserModule,

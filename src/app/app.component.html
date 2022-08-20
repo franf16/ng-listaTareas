@@ -3,13 +3,5 @@
 
   <app-agregar-tarea [(tareas)]="tareas"></app-agregar-tarea>
 
-  <div>
-    <div *ngFor="let t of tareas.reverse(); index as i" class="flex tarea">
-      <input type="checkbox" [checked]="t.completada" (click)="toggleCompletada(indiceInverso(i))">
-      <label [ngClass]="{ 'tachado': t.completada }">{{ t.titulo }}</label>
-      <button (click)="borrarTarea(indiceInverso(i))">
-        <app-trash-icon></app-trash-icon>
-      </button>
-    </div>
-  </div>
+  <app-lista-tareas [(tareas)]="tareas"></app-lista-tareas>
 </div>
