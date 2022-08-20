@@ -1,10 +1,7 @@
 <div class="lista-tareas">
   <h1>Lista de tareas</h1>
 
-  <form #tareaForm="ngForm" class="flex nueva-tarea">
-    <input type="text" name="tituloTarea" minlength="1" ngModel required>
-    <button (click)="agregarTarea(tareaForm)" [disabled]="!tareaForm.form.valid">add</button>
-  </form>
+  <app-agregar-tarea [(tareas)]="tareas"></app-agregar-tarea>
 
   <div>
     <div *ngFor="let t of tareas.reverse(); index as i" class="flex tarea">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import Tarea from './tarea/tarea.model';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = '01-lista_tareas';
-  tareas = [
+  tareas: Tarea[] = [
     {
       titulo: "Tarea N",
       completada: false
@@ -18,15 +19,6 @@ export class AppComponent {
       completada: true
     }
   ];
-
-  public agregarTarea(tareaForm: NgForm) {
-    // console.log(tareaForm)
-    this.tareas.push({
-      titulo: tareaForm.form.value.tituloTarea,
-      completada: false
-    });
-    tareaForm.reset();
-  }
 
   public borrarTarea(i: number) {
     this.tareas.splice(i, 1);
