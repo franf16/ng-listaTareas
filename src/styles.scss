@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/** general */ 
 * { box-sizing: border-box; }
 body { font-family: 'Roboto', sans-serif; }
+
+/** estructura */
 .flex { display: flex }
 .justify-between { justify-content: space-between }
+
+/** elementos html */
+button { background: none; }
+button:hover {
+  cursor: pointer;
+  background: whitesmoke;
+}
+
+/** util */
 .tachado { text-decoration: line-through }

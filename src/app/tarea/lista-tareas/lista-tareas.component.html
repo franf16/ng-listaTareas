@@ -1,0 +1,7 @@
+<div>
+  <app-item-tarea *ngFor="let _ of tareas; index as i"
+    [(tarea)]="tareas[i]"
+    [indice]="i"
+    (borrarTarea)="borrarTarea($event)"
+    ></app-item-tarea>
+</div>
