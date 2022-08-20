@@ -1,7 +1,7 @@
 <div>
-  <app-item-tarea *ngFor="let _ of tareas.reverse(); index as i"
+  <app-item-tarea *ngFor="let _ of tareas; index as i"
     [(tarea)]="tareas[i]"
-    [indice]="indiceInverso(i)"
+    [indice]="i"
     (borrarTarea)="borrarTarea($event)"
-  ></app-item-tarea>
+    ></app-item-tarea>
 </div>
