@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TrashIconComponent } from './icons/trash-icon/trash-icon.component';
 import { AgregarTareaComponent } from './tarea/agregar-tarea/agregar-tarea.component';
 import { ListaTareasComponent } from './tarea/lista-tareas/lista-tareas.component';
+import { ItemTareaComponent } from './tarea/lista-tareas/item-tarea/item-tarea.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ListaTareasComponent } from './tarea/lista-tareas/lista-tareas.componen
     TrashIconComponent,
     AgregarTareaComponent,
     ListaTareasComponent,
+    ItemTareaComponent,
   ],
   imports: [
     BrowserModule,
