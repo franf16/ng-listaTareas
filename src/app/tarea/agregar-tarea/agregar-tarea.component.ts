@@ -19,10 +19,7 @@ export class AgregarTareaComponent implements OnInit {
 
   public agregarTarea(tareaForm: NgForm) {
     // console.log(tareaForm)
-    this.tareas.unshift({
-      titulo: tareaForm.form.value.titulo,
-      completada: false
-    });
+    this.tareas.unshift(new Tarea(tareaForm.form.value.titulo));
     tareaForm.reset();
   }
 

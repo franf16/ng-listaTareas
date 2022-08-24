@@ -9,13 +9,7 @@ import Tarea from './tarea/tarea.model';
 export class AppComponent {
   title = '01lista_tareas';
   tareas: Tarea[] = [
-    {
-      titulo: "Tarea N",
-      completada: false
-    },
-    {
-      titulo: "Tarea N + 1",
-      completada: true
-    }
+    new Tarea('Tarea N'),
+    new Tarea('Tarea N + 1', true)
   ];
 }

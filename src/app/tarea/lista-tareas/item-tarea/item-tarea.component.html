@@ -1,7 +1,7 @@
 <div class="flex tarea">
   <input type="checkbox" 
     [checked]="tarea.completada" 
-    (click)="toggleCompletada()"
+    (click)="tarea.toggleCompletada()"
   >
   <label [ngClass]="{ 'tachado': tarea.completada }">{{ tarea.titulo }}</label>
   <button (click)="borrarTarea.emit(indice)">
