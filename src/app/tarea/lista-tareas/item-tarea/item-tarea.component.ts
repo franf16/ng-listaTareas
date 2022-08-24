@@ -8,10 +8,7 @@ import Tarea from '../../tarea.model';
 })
 export class ItemTareaComponent implements OnInit {
 
-  @Input() tarea: Tarea = {
-    titulo: '',
-    completada: false
-  };
+  @Input() tarea: Tarea = new Tarea();
   @Output() tareaChange = new EventEmitter<Tarea>();
 
   @Input() indice: number = -1;
@@ -21,9 +18,5 @@ export class ItemTareaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  public toggleCompletada() {
-    this.tarea.completada = !this.tarea.completada
   }
 }

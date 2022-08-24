@@ -1,8 +1,11 @@
+header {
+  h1 { text-align: center; }
+}
+
 .lista-tareas {
   margin: 0 auto;
   width: 80%;
   max-width: 540px;
   display: flex;
   flex-direction: column;
-  h1 { text-align: center; }
 }
