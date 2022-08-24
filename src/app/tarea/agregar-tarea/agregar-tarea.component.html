@@ -1,4 +1,4 @@
 <form #tareaForm="ngForm" class="flex nueva-tarea">
-  <input type="text" name="tituloTarea" minlength="1" ngModel required>
-  <button (click)="agregarTarea(tareaForm)" [disabled]="!tareaForm.form.valid">add</button>
+  <input type="text" name="titulo" minlength="1" ngModel required>
+  <button (click)="agregarTarea(tareaForm)" [disabled]="formInvalido(tareaForm)">add</button>
 </form>

@@ -3,8 +3,7 @@
     [checked]="tarea.completada" 
     (click)="toggleCompletada()"
   >
-  <label [ngClass]="{ 'tachado': tarea.completada }"
-  >{{ tarea.titulo }}</label>
+  <label [ngClass]="{ 'tachado': tarea.completada }">{{ tarea.titulo }}</label>
   <button (click)="borrarTarea.emit(indice)">
     <app-trash-icon></app-trash-icon>
   </button>
