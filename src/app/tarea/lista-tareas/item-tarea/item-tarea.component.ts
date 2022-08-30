@@ -19,4 +19,12 @@ export class ItemTareaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  compartirTarea(t: Tarea) {
+    console.log('compartida')
+  }
+
+  copiarTituloTarea(titulo: String) {
+    console.log('copiado')
+  }
 }

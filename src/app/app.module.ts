@@ -7,6 +7,10 @@ import { TrashIconComponent } from './icons/trash-icon/trash-icon.component';
 import { AgregarTareaComponent } from './tarea/agregar-tarea/agregar-tarea.component';
 import { ListaTareasComponent } from './tarea/lista-tareas/lista-tareas.component';
 import { ItemTareaComponent } from './tarea/lista-tareas/item-tarea/item-tarea.component';
+import { ShareIconComponent } from './icons/share-icon/share-icon.component';
+import { ClipboardIconComponent } from './icons/clipboard-icon/clipboard-icon.component';
+import { CheckIconComponent } from './icons/check-icon/check-icon.component';
+import { FullscreenIconComponent } from './icons/fullscreen-icon/fullscreen-icon.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,10 @@ import { ItemTareaComponent } from './tarea/lista-tareas/item-tarea/item-tarea.c
     AgregarTareaComponent,
     ListaTareasComponent,
     ItemTareaComponent,
+    ShareIconComponent,
+    ClipboardIconComponent,
+    CheckIconComponent,
+    FullscreenIconComponent,
   ],
   imports: [
     BrowserModule,

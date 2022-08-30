@@ -1,9 +1,12 @@
-<header>
+<header class="container">
   <h1>Lista de tareas</h1>
+  <button class="btn-icon">
+    <app-fullscreen-icon></app-fullscreen-icon>
+  </button>
 </header>
 
-<main class="lista-tareas">
+<main class="container">
   <app-agregar-tarea [(tareas)]="tareas"></app-agregar-tarea>
-
+  <hr>
   <app-lista-tareas [(tareas)]="tareas"></app-lista-tareas>
 </main>
