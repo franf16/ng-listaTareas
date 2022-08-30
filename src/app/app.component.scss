@@ -1,11 +1,23 @@
+@use '../globals' as *;
+
 header {
-  h1 { text-align: center; }
+  height: 64px;
+  padding: $padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 { 
+    margin: 0; 
+    font-size: 36px;
+  }
 }
 
-.lista-tareas {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 540px;
+main {
   display: flex;
   flex-direction: column;
+
+  hr {
+    border: 2px solid $negro10;
+    width: 100%;
+  }
 }

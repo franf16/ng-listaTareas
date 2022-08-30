@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './app/icons/icons';
 
 /** general */ 
 * { box-sizing: border-box; }
@@ -9,10 +10,21 @@ body { font-family: 'Roboto', sans-serif; }
 /** estructura */
 .flex { display: flex }
 .justify-between { justify-content: space-between }
+.items-center { align-items: center; }
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 540px;
+}
 
 /** elementos html */
-button { background: none; }
-button:hover {
+button { 
+  background: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+button:hover:not(:disabled) {
   cursor: pointer;
   background: whitesmoke;
 }

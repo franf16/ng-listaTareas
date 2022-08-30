@@ -1,9 +1,29 @@
-.nueva-tarea {
-  gap: 4px;
-  input { width: 100%; }
-  button { text-transform: uppercase; }
-  input, button {
-    padding: 12px 16px; 
-    border: 1px solid black;
+@use '../../../globals' as *;
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  background-color: $negro10;
+  // padding: $padding;
+  border-radius: $border-radius;
+  input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 24px;
+    padding: 0;
+    margin: 8px;
+    border: none;
+    &:focus {
+      outline: none;
+    } 
+  }
+  button {
+    display: inline-block;
+    // flex-basis: 48px;
+    margin: 8px;
+    margin-left: 0;
+    min-width: 48px;
   }
 }
