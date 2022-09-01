@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import Tarea from '../tarea.model';
 
@@ -12,7 +12,9 @@ export class AgregarTareaComponent implements OnInit {
   @Input() tareas: Tarea[] = [];
   @Output() tareasChange = new EventEmitter<Tarea[]>();
 
-  constructor() { }
+  constructor(
+    readonly el: ElementRef
+  ) { }
 
   ngOnInit(): void {
   }

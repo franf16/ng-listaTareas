@@ -6,7 +6,7 @@
 </header>
 
 <main class="container">
-  <app-agregar-tarea [(tareas)]="tareas"></app-agregar-tarea>
-  <hr>
-  <app-lista-tareas [(tareas)]="tareas"></app-lista-tareas>
+  <app-agregar-tarea #agregarTarea [(tareas)]="tareas" class="sticky"></app-agregar-tarea>
+  <hr #divider>
+  <app-lista-tareas [(tareas)]="tareas" id="lista-tareas"></app-lista-tareas>
 </main>
