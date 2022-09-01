@@ -1,7 +1,7 @@
 @use '../globals' as *;
 
 header {
-  height: 64px;
+  // height: 64px;
   padding: $padding;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@ header {
   }
 }
 
-main {
+main { height: 2000px; position: relative;
   display: flex;
   flex-direction: column;
 
@@ -20,4 +20,9 @@ main {
     border: 2px solid $negro10;
     width: 100%;
   }
+}
+
+.sticky {
+  position: sticky;
+  top: 16px;
 }
