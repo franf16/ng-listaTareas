@@ -1,11 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@use './globals' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './app/icons/icons';
 
 /** general */ 
 * { box-sizing: border-box; }
-body { font-family: 'Roboto', sans-serif; }
+
+body { 
+  font-family: 'Roboto', sans-serif; 
+  background-color: $bg-1;
+  color: $color-1;
+  @media (prefers-color-scheme: dark) {
+    background-color: $negro;
+    color: $blanco;
+  }
+}
 
 /** estructura */
 .flex { display: flex }
@@ -21,12 +31,18 @@ body { font-family: 'Roboto', sans-serif; }
 /** elementos html */
 button { 
   background: none;
-  border: 1px solid black;
+  border: 1px solid $color-1;
+  @media (prefers-color-scheme: dark) {
+    border-color: $blanco;
+  }
   border-radius: 4px;
 }
 button:hover:not(:disabled) {
   cursor: pointer;
-  background: whitesmoke;
+  background: $bg-2;
+  @media (prefers-color-scheme: dark) {
+    background: $blanco10;
+  }
 }
 
 /** util */
