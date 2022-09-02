@@ -5,10 +5,11 @@
   align-items: center;
   padding: $padding;
   border-radius: $border-radius;
-  background-color: $bg-2;
-  @media (prefers-color-scheme: dark) {
-    background-color: $blanco10;
-  }
+  background-color: var(--bg-2);
+  // background-color: $bg-2;
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: $blanco10;
+  // }
   width: 100%;
   align-items: center;
 
@@ -27,10 +28,11 @@
       margin: 0 8px 0 0;
       padding: 0;
       // display: block;
-      border: 2px solid $color-1;
-      @media (prefers-color-scheme: dark) {
-        border-color: $blanco;
-      }
+      border: 2px solid var(--color-1);
+      // border: 2px solid $color-1;
+      // @media (prefers-color-scheme: dark) {
+      //   border-color: $blanco;
+      // }
       background-color: transparent;
       appearance: none;
       cursor: pointer;
