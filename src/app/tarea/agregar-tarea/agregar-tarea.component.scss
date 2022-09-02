@@ -7,16 +7,23 @@
     backdrop-filter: blur(16px);
 
     input::placeholder {
-      color: $negro;
+      color: $color-1;
+      @media (prefers-color-scheme: dark) {
+        color: $blanco;
+      }
     }
   }
 }
+
 form {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  background-color: $negro10;
+  background-color: $bg-2;
+  @media (prefers-color-scheme: dark) {
+    background-color: $blanco10;
+  }
   border-radius: $border-radius;
 
 
@@ -31,6 +38,9 @@ form {
     &:focus {
       outline: none;
     } 
+    @media (prefers-color-scheme: dark) {
+      color: $blanco;
+    }
   }
 
   button {
