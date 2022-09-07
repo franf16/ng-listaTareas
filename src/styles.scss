@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @use './globals' as *;
+@import './themes';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './app/icons/icons';
 
@@ -8,13 +9,10 @@
 * { box-sizing: border-box; }
 
 body { 
+  margin: 0;
   font-family: 'Roboto', sans-serif; 
-  background-color: $bg-1;
-  color: $color-1;
-  @media (prefers-color-scheme: dark) {
-    background-color: $negro;
-    color: $blanco;
-  }
+  background-color: var(--bg-1);
+  color: var(--color-1);
 }
 
 /** estructura */
@@ -31,19 +29,18 @@ body {
 /** elementos html */
 button { 
   background: none;
-  border: 1px solid $color-1;
-  @media (prefers-color-scheme: dark) {
-    border-color: $blanco;
-  }
+  border: 1px solid var(--color-1);
+  color: var(--color-1);
   border-radius: 4px;
+  padding: $padding;
 }
 button:hover:not(:disabled) {
   cursor: pointer;
-  background: $bg-2;
-  @media (prefers-color-scheme: dark) {
-    background: $blanco10;
-  }
+  background: var(--bg-2);
 }
 
 /** util */
-.tachado { text-decoration: line-through }
+.tachado { 
+  text-decoration: line-through;
+  text-decoration-color: var(--color-1);
+}

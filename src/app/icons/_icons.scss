@@ -1,11 +1,6 @@
-@use '../../globals' as *;
-
 .icon {
   width: 1rem;
-  color: $color-1;
-  @media (prefers-color-scheme: dark) {
-    color: $blanco;
-  }
+  color: var(--color-1);
 }
 
 .btn-icon {

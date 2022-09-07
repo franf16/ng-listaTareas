@@ -7,10 +7,11 @@
     backdrop-filter: blur(16px);
 
     input::placeholder {
-      color: $color-1;
-      @media (prefers-color-scheme: dark) {
-        color: $blanco;
-      }
+      color: var(--color-1);
+      // color: $color-1;
+      // @media (prefers-color-scheme: dark) {
+      //   color: $blanco;
+      // }
     }
   }
 }
@@ -20,10 +21,11 @@ form {
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  background-color: $bg-2;
-  @media (prefers-color-scheme: dark) {
-    background-color: $blanco10;
-  }
+  background-color: var(--bg-2);
+  // background-color: $bg-2;
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: $blanco10;
+  // }
   border-radius: $border-radius;
 
 
@@ -38,9 +40,10 @@ form {
     &:focus {
       outline: none;
     } 
-    @media (prefers-color-scheme: dark) {
-      color: $blanco;
-    }
+    color: var(--color-1);
+    // @media (prefers-color-scheme: dark) {
+    //   color: $blanco;
+    // }
   }
 
   button {
