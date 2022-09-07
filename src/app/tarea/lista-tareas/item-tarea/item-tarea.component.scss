@@ -1,13 +1,12 @@
-@use '../../../../globals' as *;
+// @use '../../../../globals' as *;
 
 .tarea {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: $padding;
-  border-radius: $border-radius;
+  padding: var(--padding-base);
+  border-radius: var(--border-radius);
   background-color: var(--bg-2);
-  width: 100%;
-  align-items: center;
 
   form {
     width: 100%;
@@ -21,29 +20,31 @@
     .checkbox {
       width: 24px;
       height: 24px;
-      margin: 0 8px 0 0;
+      margin: 0 var(--ubase) 0 0;
       padding: 0;
       border: 2px solid var(--color-1);
       background-color: transparent;
       appearance: none;
       cursor: pointer;
       position: relative;
-    }
-    .checkbox:checked::after {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      content: var(--icon-checked);
+
+      &:checked::after {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: var(--icon-checked);
+      }
     }
   }
 
   .botonera {
     display: flex;
     align-items: center;
+    gap: var(--ubase);
 
-    button:not(:last-child) {
-      margin-right: 8px;
-    }
+    // button:not(:last-child) {
+    //   margin-right: var(--ubase);
+    // }
   }
 }

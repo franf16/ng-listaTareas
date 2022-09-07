@@ -6,10 +6,17 @@
 .btn-icon {
   height: 48px;
   width: 48px;
-  padding: 8px;
+  padding: $ubase;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:disabled {
+    .icon {
+      color: var(--color-dimmed);
+    }
+  }
+  
   svg {
     vertical-align: bottom;
     text-align: center;

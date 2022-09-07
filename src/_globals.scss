@@ -7,5 +7,9 @@ $blanco: rgba(255, 255, 255, 1);
 $blanco50: rgba(255, 255, 255, .5);
 $blanco10: rgba(255, 255, 255, .1);
 
-$padding: 6px 9px;
+$ubase: 8px;
+$py: $ubase / 2;
+$px: $ubase;
+// $padding: $py $px;
+
 $border-radius: 4px;
