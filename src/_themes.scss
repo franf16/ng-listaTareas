@@ -1,17 +1,25 @@
 @use './globals' as *;
 
-html {
-  --color-1: $negro;
-  --bg-1: $blanco;
-  --bg-2: $negro10;
-  --bg-3: $negro50;
+.tema-transicion {
+  transition: background-color .2s, color .2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --color-1: $blanco;
-    --bg-1: $negro;
-    --bg-2: $blanco10;
-    --bg-3: $blanco50;
-  }
+.tema-light {
+  --color-1: #{$negro};
+  --bg-1: #{$blanco};
+  --bg-2: #{$negro10};
+  --bg-3: #{$negro50};
+
+  // icons
+  --icon-checked: url(./assets/icons/checked-black.svg);
+}
+
+.tema-dark {
+  --color-1: #{$blanco};
+  --bg-1: #{$negro};
+  --bg-2: #{$blanco10};
+  --bg-3: #{$blanco50};
+
+  // icons
+  --icon-checked: url(./assets/icons/checked-white.svg);
 }

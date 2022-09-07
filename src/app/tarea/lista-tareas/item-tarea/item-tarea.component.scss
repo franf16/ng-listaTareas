@@ -6,10 +6,6 @@
   padding: $padding;
   border-radius: $border-radius;
   background-color: var(--bg-2);
-  // background-color: $bg-2;
-  // @media (prefers-color-scheme: dark) {
-  //   background-color: $blanco10;
-  // }
   width: 100%;
   align-items: center;
 
@@ -27,12 +23,7 @@
       height: 24px;
       margin: 0 8px 0 0;
       padding: 0;
-      // display: block;
       border: 2px solid var(--color-1);
-      // border: 2px solid $color-1;
-      // @media (prefers-color-scheme: dark) {
-      //   border-color: $blanco;
-      // }
       background-color: transparent;
       appearance: none;
       cursor: pointer;
@@ -43,12 +34,7 @@
       top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
-      // content: url(../../../icons/check-icon/check-icon.component.svg);
-      content: url(../../../../assets/icons/checked-black.svg);
-      
-      @media (prefers-color-scheme: dark) {
-        content: url(../../../../assets/icons/checked-white.svg);
-      }
+      content: var(--icon-checked);
     }
   }
 
