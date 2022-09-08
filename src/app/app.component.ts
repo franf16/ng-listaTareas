@@ -31,9 +31,8 @@ export class AppComponent implements AfterViewInit, OnInit {
         const c = e.intersectionRatio < 1;
         this.elAgregarTarea.el.nativeElement.classList.toggle("sticked", c);
         agregarTareaTituloInput.placeholder = c ? 'Escribe una tarea...' : '';
-      }, 
-      {
-        rootMargin: '-45px',
+      }, {
+        rootMargin: window.innerWidth > 500 ? '-55px' : '-0px', // en mobile queda fijado sin scroll
         threshold: [ 1 ]
       }
     ).observe(this.elDivider.nativeElement);

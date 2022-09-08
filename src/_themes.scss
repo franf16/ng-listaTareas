@@ -6,6 +6,7 @@
 
 .tema-light {
   --color-1: #{$negro};
+  --color-dimmed: #{$negro50};
   --bg-1: #{$blanco};
   --bg-2: #{$negro10};
   --bg-3: #{$negro50};
@@ -16,6 +17,7 @@
 
 .tema-dark {
   --color-1: #{$blanco};
+  --color-dimmed: #{$blanco50};
   --bg-1: #{$negro};
   --bg-2: #{$blanco10};
   --bg-3: #{$blanco50};
