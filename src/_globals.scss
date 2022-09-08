@@ -1,3 +1,4 @@
+@use "sass:math"; 
 /** colores */
 
 $negro: rgba(34, 34, 34, 1);
@@ -8,7 +9,7 @@ $blanco50: rgba(255, 255, 255, .5);
 $blanco10: rgba(255, 255, 255, .1);
 
 $ubase: 8px;
-$py: $ubase / 2;
+$py: math.div($ubase, 2);
 $px: $ubase;
 // $padding: $py $px;
 
