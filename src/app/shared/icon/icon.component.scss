@@ -1,0 +1,10 @@
+:host.icon-disabled {
+  .icon {
+    color: var(--color-dimmed);
+  }
+}
+
+.icon {
+  width: 1rem;
+  color: var(--color-1);
+}

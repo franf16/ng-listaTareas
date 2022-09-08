@@ -1,9 +1,7 @@
 <form #tareaForm="ngForm" id="add-tarea">
   <input type="text" name="titulo" minlength="1" ngModel required>
-  <button class="btn-icon"
-    (click)="agregarTarea(tareaForm)" 
+  <app-button icon="check"
+    (click)="!formInvalido(tareaForm) && agregarTarea(tareaForm)" 
     [disabled]="formInvalido(tareaForm)"
-  >
-    <app-check-icon></app-check-icon>
-  </button>
+  ></app-button>
 </form>

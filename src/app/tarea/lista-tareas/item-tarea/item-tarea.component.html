@@ -7,14 +7,8 @@
     <label [ngClass]="{ 'tachado': tarea.completada }">{{ tarea.titulo }}</label>
   </form>
   <nav class="botonera">
-    <button class="btn-icon" (click)="copiarTituloTarea(tarea.titulo)">
-      <app-clipboard-icon></app-clipboard-icon>
-    </button>
-    <button class="btn-icon" (click)="compartirTarea(tarea)">
-      <app-share-icon></app-share-icon>
-    </button>
-    <button class="btn-icon" (click)="borrarTarea.emit(indice)">
-      <app-trash-icon></app-trash-icon>
-    </button>
+    <app-button icon="clipboard" (click)="copiarTituloTarea(tarea.titulo)"></app-button>
+    <app-button icon="share" (click)="compartirTarea(tarea)"></app-button>
+    <app-button icon="trash" (click)="borrarTarea.emit(indice)"></app-button>
   </nav>
 </div>

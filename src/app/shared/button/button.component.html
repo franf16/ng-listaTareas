@@ -1,0 +1,10 @@
+<button 
+  [ngClass]="{ 'btn-icon': icon != '' }"
+  [disabled]="disabled"  
+>
+  <app-icon *ngIf="icon != ''" 
+    [type]="icon"
+    [ngClass]="{ 'icon-disabled': disabled }"  
+  ></app-icon>
+  <ng-content></ng-content>
+</button>
