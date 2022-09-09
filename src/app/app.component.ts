@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AgregarTareaComponent } from './tarea/agregar-tarea/agregar-tarea.component';
-import Tarea from './tarea/tarea.model';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,6 @@ import Tarea from './tarea/tarea.model';
 })
 export class AppComponent implements AfterViewInit, OnInit {
   title = '01lista_tareas';
-  tareas: Tarea[] = [
-    new Tarea('Tarea N'),
-    new Tarea('Tarea N + 1', true)
-  ];
 
   @ViewChild('agregarTarea') elAgregarTarea!: AgregarTareaComponent;
   @ViewChild('divider') elDivider!: ElementRef<HTMLHRElement>;
