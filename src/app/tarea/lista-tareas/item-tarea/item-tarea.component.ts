@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import Tarea from '../../tarea.model';
+import { TareaService } from '../../tarea.service';
 
 @Component({
   selector: 'app-item-tarea',
@@ -9,13 +10,11 @@ import Tarea from '../../tarea.model';
 export class ItemTareaComponent implements OnInit {
 
   @Input() tarea: Tarea = new Tarea();
-  @Output() tareaChange = new EventEmitter<Tarea>();
-
   @Input() indice: number = -1;
 
-  @Output() borrarTarea = new EventEmitter<number>();
-
-  constructor() { }
+  constructor(
+    private tareaService: TareaService
+  ) {}
 
   ngOnInit(): void {
   }
@@ -26,5 +25,9 @@ export class ItemTareaComponent implements OnInit {
 
   copiarTituloTarea(titulo: String) {
     console.log('copiado')
+  }
+
+  borrarTarea() {
+    this.tareaService.borrarTarea(this.indice);
   }
 }

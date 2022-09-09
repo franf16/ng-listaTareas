@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import Tarea from '../tarea.model';
+import { TareaService } from '../tarea.service';
 
 @Component({
   selector: 'app-agregar-tarea',
@@ -9,19 +10,16 @@ import Tarea from '../tarea.model';
 })
 export class AgregarTareaComponent implements OnInit {
 
-  @Input() tareas: Tarea[] = [];
-  @Output() tareasChange = new EventEmitter<Tarea[]>();
-
   constructor(
-    readonly el: ElementRef
+    readonly el: ElementRef,
+    private tareaService: TareaService
   ) { }
 
   ngOnInit(): void {
   }
 
   public agregarTarea(tareaForm: NgForm) {
-    // console.log(tareaForm)
-    this.tareas.unshift(new Tarea(tareaForm.form.value.titulo));
+    this.tareaService.agregarTarea(new Tarea(tareaForm.form.value.titulo));
     tareaForm.reset();
   }
 

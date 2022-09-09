@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import Tarea from '../tarea.model';
+import { TareaService } from '../tarea.service';
 
 @Component({
   selector: 'app-lista-tareas',
@@ -8,15 +9,14 @@ import Tarea from '../tarea.model';
 })
 export class ListaTareasComponent implements OnInit {
 
-  @Input() tareas: Tarea[] = [];
-  @Output() tareasChange = new EventEmitter<Tarea[]>();
+  tareas: Tarea[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private tareaService: TareaService
+  ) {
+    this.tareas = this.tareaService.getTareas();
   }
 
-  public borrarTarea(i: number) {
-    this.tareas.splice(i, 1);
+  ngOnInit(): void {
   }
 }
